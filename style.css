@@ -1,0 +1,261 @@
+/* Thiết lập cơ bản cho toàn bộ trang web */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth; /* Cuộn trang mượt mà */
+}
+
+body {
+    background-color: #121212; /* Màu nền tối chủ đạo */
+    color: #e0e0e0; /* Màu chữ trắng xám dịu mắt */
+    line-height: 1.6;
+}
+
+/* THANH NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo span {
+    color: #00adb5; /* Màu xanh neon tạo điểm nhấn */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00adb5;
+}
+
+/* PHẦN HERO GIỚI THIỆU CHÍNH */
+.hero-section {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background: linear-gradient(135deg, #1f4068 0%, #162447 100%); /* Màu nền chuyển sắc chuyên nghiệp */
+}
+
+.hero-content h3 {
+    font-size: 22px;
+    color: #00adb5;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 55px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 24px;
+    color: #eee;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.bio {
+    max-width: 600px;
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+    font-size: 15px;
+    color: #aaa;
+}
+
+/* NÚT BẤM (BUTTON) */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #00adb5;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 173, 181, 0.3);
+}
+
+.btn:hover {
+    background-color: #008c95;
+    transform: translateY(-3px); /* Hiệu ứng nhấc nút lên khi di chuột */
+}
+
+.btn-sm {
+    display: inline-block;
+    padding: 8px 18px;
+    background-color: transparent;
+    color: #00adb5;
+    border: 2px solid #00adb5;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn-sm:hover {
+    background-color: #00adb5;
+    color: #fff;
+}
+
+/* ĐỊNH DẠNG CÁC PHẦN CHUNG (SECTIONS) */
+.section {
+    padding: 80px 10%;
+}
+
+.gray-bg {
+    background-color: #1a1a1a;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #fff;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #00adb5;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* THẺ THÔNG TIN (CARDS) */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: #222831;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    border: 1px solid #393e46;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #00adb5; /* Đổi màu viền khi hover */
+}
+
+.cert-card h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.issuer {
+    color: #00adb5;
+    font-weight: 500;
+}
+
+.date {
+    color: #888;
+    font-size: 14px;
+}
+
+/* ĐỊNH DẠNG PHẦN DỰ ÁN */
+.project-box {
+    border-left: 5px solid #00adb5; /* Tạo vạch màu xanh bên trái hộp dự án */
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.project-header h3 {
+    color: #fff;
+}
+
+.project-date {
+    color: #888;
+    font-size: 14px;
+}
+
+.tech-stack {
+    margin-top: 15px;
+    color: #eee;
+}
+
+/* PHẦN KỸ NĂNG */
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.skill-group {
+    flex: 1;
+    background-color: #1a1a1a;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.skill-group h3 {
+    color: #00adb5;
+    margin-bottom: 15px;
+}
+
+.skill-group ul {
+    list-style-position: inside;
+}
+
+.skill-group li {
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+/* CHÂN TRANG */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #111;
+    color: #666;
+    font-size: 14px;
+    border-top: 1px solid #222;
+}
